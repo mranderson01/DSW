@@ -3,10 +3,7 @@
 namespace Ejercicio2.Models.SignUp
 {
     public class RegistrerUser
-    {
-        [Required(ErrorMessage ="Es requerido el nombre de usuario")]
-        public string? Username { get; set; }
-
+    {        
         [Required(ErrorMessage = "Es requerido el correo de usuario")]
         public string? Email { get; set; }
 

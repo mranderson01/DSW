@@ -1700,10 +1700,10 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/6.0.23": {
+      "Microsoft.EntityFrameworkCore.Tools/6.0.25": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": "6.0.23"
+          "Microsoft.EntityFrameworkCore.Design": "6.0.25"
         },
         "compile": {
           "lib/net6.0/_._": {}
@@ -6310,17 +6310,17 @@
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Tools/6.0.23": {
-      "sha512": "SHxDbhoNuomnHaIppyjeEjOhT030DDwtMZsnIxRo6kBdFEv8eFwJtl6c+8a91V9nWm9YMNIoWNqlWkvw+JfuUA==",
+    "Microsoft.EntityFrameworkCore.Tools/6.0.25": {
+      "sha512": "2iPMR+DHXh2Xn9qoJ0ejzdHblpns73e1pZ/pyRbYDQi0HPJyq1/pTYDda1owJ5W2lxAGDg8l5Fl1jVp97fTR1g==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.tools/6.0.23",
+      "path": "microsoft.entityframeworkcore.tools/6.0.25",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/net6.0/_._",
-        "microsoft.entityframeworkcore.tools.6.0.23.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.6.0.25.nupkg.sha512",
         "microsoft.entityframeworkcore.tools.nuspec",
         "tools/EntityFrameworkCore.PS2.psd1",
         "tools/EntityFrameworkCore.PS2.psm1",
@@ -12207,26 +12207,26 @@
       "Microsoft.AspNetCore.Identity.UI >= 6.0.25",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.25",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.23",
-      "Microsoft.EntityFrameworkCore.Tools >= 6.0.23",
+      "Microsoft.EntityFrameworkCore.Tools >= 6.0.25",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.16",
       "Swashbuckle.AspNetCore >= 6.5.0",
       "System.IdentityModel.Tokens.Jwt >= 6.25.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rodrigo2\\.nuget\\packages\\": {}
+    "C:\\Users\\2dawb\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projectos\\CURSODAWB\\CURSODAWB\\DSW\\Unidad 3\\Ejercicio2\\Ejercicio2.csproj",
+      "projectUniqueName": "C:\\Users\\2dawb\\Desktop\\2DAWB\\DSW\\Unidad 3\\Ejercicio2\\Ejercicio2.csproj",
       "projectName": "Ejercicio2",
-      "projectPath": "D:\\Projectos\\CURSODAWB\\CURSODAWB\\DSW\\Unidad 3\\Ejercicio2\\Ejercicio2.csproj",
-      "packagesPath": "C:\\Users\\rodrigo2\\.nuget\\packages\\",
-      "outputPath": "D:\\Projectos\\CURSODAWB\\CURSODAWB\\DSW\\Unidad 3\\Ejercicio2\\obj\\",
+      "projectPath": "C:\\Users\\2dawb\\Desktop\\2DAWB\\DSW\\Unidad 3\\Ejercicio2\\Ejercicio2.csproj",
+      "packagesPath": "C:\\Users\\2dawb\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\2dawb\\Desktop\\2DAWB\\DSW\\Unidad 3\\Ejercicio2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rodrigo2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\2dawb\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12234,7 +12234,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -12283,7 +12282,7 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[6.0.23, )"
+            "version": "[6.0.25, )"
           },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
@@ -12317,7 +12316,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

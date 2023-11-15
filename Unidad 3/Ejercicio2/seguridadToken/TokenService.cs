@@ -28,10 +28,10 @@ namespace Ejercicio2.seguridadToken
 
             var issuerDato = _configuration["jwt:Issuer"];
             var audienceDato = _configuration["jwt:Audience"];
-            var keyDato = _configuration["jwt:Key"];
+            var claveDato = _configuration["jwt:Key"];
 
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(keyDato));
-            var creds = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+            var claveseguridad = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(claveDato));
+            var credenciales = new SigningCredentials(claveseguridad, SecurityAlgorithms.HmacSha256);
 
             
             // CLAIMS
@@ -55,7 +55,7 @@ namespace Ejercicio2.seguridadToken
                 audience: audienceDato,
                 expires: DateTime.Now.AddMinutes(30),
                 claims: claims,
-                signingCredentials: creds            
+                signingCredentials: credenciales
             );
 
             return new JwtSecurityTokenHandler().WriteToken(token);

@@ -9,9 +9,11 @@ using Ejercicio2.Data;
 using Ejercicio2.Models;
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ejercicio2.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class GamesController : ControllerBase
@@ -25,6 +27,7 @@ namespace Ejercicio2.Controllers
 
         // GET: api/Games
         [HttpGet]
+        [Authorize(Roles = "Basic,Premium,Admin")]
         public async Task<ActionResult<List<Game>>> GetGame()
         {
             if (_context.Game == null)
@@ -46,6 +49,7 @@ namespace Ejercicio2.Controllers
 
         // GET: api/Games/5
         [HttpGet("{id}")]
+        [Authorize(Roles = "Basic,Premium,Admin")]
         public async Task<ActionResult<Game>> GetGame(int id)
         {
           if (_context.Game == null)
@@ -65,6 +69,7 @@ namespace Ejercicio2.Controllers
         // PUT: api/Games/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> PutGame(int id, Game game)
         {
             if (ModelState.IsValid)
@@ -101,6 +106,7 @@ namespace Ejercicio2.Controllers
         // POST: api/Games
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Game>> PostGame(Game game)
         {
           if (_context.Game == null)
@@ -117,6 +123,7 @@ namespace Ejercicio2.Controllers
 
         // DELETE: api/Games/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteGame(int id)
         {
             if (_context.Game == null)
@@ -134,7 +141,7 @@ namespace Ejercicio2.Controllers
 
             return NoContent();
         }
-
+        [Authorize(Roles = "Admin")]
         private bool GameExists(int id)
         {
             return (_context.Game?.Any(e => e.Id == id)).GetValueOrDefault();

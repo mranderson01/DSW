@@ -1,4 +1,5 @@
 ﻿using Ejercicio2.Models;
+using Ejercicio2.Models.Login;
 using Ejercicio2.Models.SignUp;
 using Ejercicio2.seguridadToken;
 using MessagePack.Formatters;
@@ -45,8 +46,8 @@ namespace Ejercicio2.Controllers
 
             IdentityUser user = new ()
             {                                
-                UserName = registrarUsuario.Username,
-                NormalizedUserName = registrarUsuario.Username.ToUpper(),
+                UserName = registrarUsuario.Email,
+                NormalizedUserName = registrarUsuario.Email.ToUpper(),
                 Email = registrarUsuario.Email,
                 NormalizedEmail = registrarUsuario.Email.ToUpper(),
                 SecurityStamp = Guid.NewGuid().ToString()
@@ -58,27 +59,25 @@ namespace Ejercicio2.Controllers
                 StatusCode(StatusCodes.Status500InternalServerError,
                             new Response { Status = "Error", Message = "El usuario no se pudo crear" });
             }
-            //Añadir el rol
-
-            await _userManager.AddToRoleAsync(user, "Basic");
+            //Añadir el rol 
+            await _userManager.AddToRoleAsync(user,"Basic");
 
             return StatusCode(StatusCodes.Status201Created,
                             new Response { Status = "Satisfactorio", Message = "Se creo satisfactoriamente el usuario" });
 
         }
 
-        /*[HttpPost("login")]
+        [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginModel model)
         {
             // Lógica para autenticar al usuario
-            var user = await _userManager.FindByNameAsync(model.UserName);
+            var user = await _userManager.FindByNameAsync(model.Username);
 
             if (user != null && await _userManager.CheckPasswordAsync(user, model.Password))
             {
                 // Usuario autenticado correctamente
-
                 // Generar el token
-                var token = await _tokenService.GenerateToken(model.UserName);
+                var token = await _tokenService.GenerateToken(user.UserName);
 
                 // Puedes devolver el token como parte de la respuesta
                 return Ok(new { Token = token });
@@ -88,6 +87,6 @@ namespace Ejercicio2.Controllers
                 // Fallo de autenticación
                 return Unauthorized();
             }
-        }*/
+        }
     } 
 }

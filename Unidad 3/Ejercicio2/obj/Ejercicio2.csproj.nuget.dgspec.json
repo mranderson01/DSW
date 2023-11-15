@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projectos\\CURSODAWB\\CURSODAWB\\DSW\\Unidad 3\\Ejercicio2\\Ejercicio2.csproj": {}
+    "C:\\Users\\2dawb\\Desktop\\2DAWB\\DSW\\Unidad 3\\Ejercicio2\\Ejercicio2.csproj": {}
   },
   "projects": {
-    "D:\\Projectos\\CURSODAWB\\CURSODAWB\\DSW\\Unidad 3\\Ejercicio2\\Ejercicio2.csproj": {
+    "C:\\Users\\2dawb\\Desktop\\2DAWB\\DSW\\Unidad 3\\Ejercicio2\\Ejercicio2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projectos\\CURSODAWB\\CURSODAWB\\DSW\\Unidad 3\\Ejercicio2\\Ejercicio2.csproj",
+        "projectUniqueName": "C:\\Users\\2dawb\\Desktop\\2DAWB\\DSW\\Unidad 3\\Ejercicio2\\Ejercicio2.csproj",
         "projectName": "Ejercicio2",
-        "projectPath": "D:\\Projectos\\CURSODAWB\\CURSODAWB\\DSW\\Unidad 3\\Ejercicio2\\Ejercicio2.csproj",
-        "packagesPath": "C:\\Users\\rodrigo2\\.nuget\\packages\\",
-        "outputPath": "D:\\Projectos\\CURSODAWB\\CURSODAWB\\DSW\\Unidad 3\\Ejercicio2\\obj\\",
+        "projectPath": "C:\\Users\\2dawb\\Desktop\\2DAWB\\DSW\\Unidad 3\\Ejercicio2\\Ejercicio2.csproj",
+        "packagesPath": "C:\\Users\\2dawb\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\2dawb\\Desktop\\2DAWB\\DSW\\Unidad 3\\Ejercicio2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rodrigo2\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\2dawb\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -71,7 +70,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.23, )"
+              "version": "[6.0.25, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
@@ -105,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

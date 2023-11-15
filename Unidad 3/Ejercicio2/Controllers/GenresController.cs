@@ -9,11 +9,13 @@ using Ejercicio2.Data;
 using Ejercicio2.Models;
 using System.Text.Json.Serialization;
 using System.Text.Json;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Ejercicio2.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class GenresController : ControllerBase
     {
         private readonly Ejercicio2Context _context;
@@ -25,6 +27,7 @@ namespace Ejercicio2.Controllers
 
         // GET: api/Genres
         [HttpGet]
+        [Authorize(Roles = "Basic,Premium,Admin")]
         public async Task<ActionResult<List<Genre>>> GetGenre()
         {
           if (_context.Genre == null)
@@ -45,6 +48,7 @@ namespace Ejercicio2.Controllers
 
         // GET: api/Genres/5
         [HttpGet("{id}")]
+        [Authorize(Roles = "Basic,Premium,Admin")]
         public async Task<ActionResult<Genre>> GetGenre(int id)
         {
           if (_context.Genre == null)
@@ -64,6 +68,7 @@ namespace Ejercicio2.Controllers
         // PUT: api/Genres/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> PutGenre(int id, Genre genre)
         {
             if (id != genre.Id)
@@ -95,6 +100,7 @@ namespace Ejercicio2.Controllers
         // POST: api/Genres
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<ActionResult<Genre>> PostGenre(Genre genre)
         {
             if (ModelState.IsValid)
@@ -125,6 +131,7 @@ namespace Ejercicio2.Controllers
 
         // DELETE: api/Genres/5
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteGenre(int id)
         {
             if (_context.Genre == null)
@@ -142,7 +149,7 @@ namespace Ejercicio2.Controllers
 
             return NoContent();
         }
-
+        [Authorize(Roles = "Admin")]
         private bool GenreExists(int id)
         {
             return (_context.Genre?.Any(e => e.Id == id)).GetValueOrDefault();
